@@ -28,17 +28,12 @@ def bound_search(l, e, start = None, stop = None, bound = None):
     #middle value
     mid = math.floor((stop - start) / 2) + start
 
-    #recursive search for top and bottom values of e
-    #searching up the list
     if (bound == 'top'):
         if l[mid] > e:
             return bound_search(l,e, start, mid)
         else:
             return bound_search(l,e, (mid + 1), stop)
 
-    #question is... how do you best reverse direction of the search once top is found???
-
-    #searching down the list
     if (bound == 'btm'):
         if l[mid] >= e:
             return bound_search(l,e, 0, mid, 'btm')
