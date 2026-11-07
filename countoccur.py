@@ -45,5 +45,5 @@ def count_occur(l, e):
     return (bound_search(l,e)) - (bound_search(l,e, None, None, "btm"))
 
 
-sorted_list = [2,2,3,3,3,5,7]
+sorted_list = [2,2,3,3,5]
 print(f'{count_occur(sorted_list, 3)}')
